@@ -134,4 +134,12 @@
 
     $container.removeClass('mobile-nav-on');
   });
+
+    $(window).on('load', function() {
+        const url = window.location.href;
+        if(url.split('/').length === 4 && !url.split('/')[3]) {
+          window.location.href = '/categories/tech'
+        }
+    } );
+
 })(jQuery);
